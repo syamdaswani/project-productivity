@@ -1,0 +1,39 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> NAME </th>
+    <td mat-cell *matCellDef="let customer">
+      <a routerLink="/customer-details/{{customer.id}}" routerLinkActive="active">{{customer.name}}</a>
+    </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> EMAIL </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.email}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="mobile_num">
+    <th mat-header-cell *matHeaderCellDef> MOBILE PHONE NUMBER </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.mobile_num}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="phone_num">
+    <th mat-header-cell *matHeaderCellDef> PHONE NUMBER </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.phone_num}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="last_contacted">
+    <th mat-header-cell *matHeaderCellDef> LAST CONTACTED </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.last_contacted}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

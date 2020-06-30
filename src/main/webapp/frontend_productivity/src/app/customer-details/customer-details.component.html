@@ -1,0 +1,140 @@
+<mat-drawer-container class="customer-details-container">
+  <mat-drawer mode="side" opened>
+    <mat-card class="customer-card">
+      <mat-card-header>
+        <div mat-card-avatar class="customer-header-image"></div>
+        <mat-card-title>{{customer.name}}</mat-card-title>
+        <mat-card-subtitle>{{customer.work_position}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <mat-form-field>
+          <mat-select placeholder="Actions">
+            <mat-option value="Add">Add</mat-option>
+            <mat-option value="Edit">Edit</mat-option>
+            <mat-option value="Delete">Delete</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      About {{customer.name}}
+      <mat-list>
+        <h3 mat-subheader>First name</h3>
+        <mat-list-item>
+          <p mat-line>{{customer.name}}</p>
+        </mat-list-item>
+
+        <h3 mat-subheader>Last name</h3>
+        <mat-list-item>
+          <p mat-line>{{customer.name}}</p>
+        </mat-list-item>
+
+        <h3 mat-subheader>Last contacted</h3>
+        <mat-list-item>
+          <p mat-line>
+            <!--TODO Finish Customer Model-->
+          </p>
+        </mat-list-item>
+
+        <h3 mat-subheader>Email</h3>
+        <mat-list-item>
+          <p mat-line>{{customer.email}}</p>
+        </mat-list-item>
+
+        <h3 mat-subheader>Mobile phone number</h3>
+        <mat-list-item>
+          <p mat-line>{{customer.mobile_num}}</p>
+        </mat-list-item>
+
+        <h3 mat-subheader>Company name</h3>
+        <mat-list-item>
+          <p mat-line>
+            <!--TODO Finish Customer Model-->
+          </p>
+        </mat-list-item>
+
+        <h3 mat-subheader>City</h3>
+        <mat-list-item>
+          <p mat-line>
+            <!--TODO Finish Customer Model-->
+          </p>
+        </mat-list-item>
+
+        <h3 mat-subheader>Country</h3>
+        <mat-list-item>
+          <p mat-line>
+            <!--TODO Finish Customer Model-->
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </mat-card>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-card>
+      <mat-tab-group>
+        <mat-tab label="New Note">
+          <ng-template mat-tab-label>
+            <mat-icon>note_add</mat-icon> New note
+          </ng-template>
+          <form>
+            <mat-form-field class="full-width">
+              <textarea matInput placeholder="Start typing to leave a note..."></textarea>
+            </mat-form-field>
+          </form>
+        </mat-tab>
+        <mat-tab label="Email">
+          <ng-template mat-tab-label>
+            <mat-icon>email</mat-icon> Email
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Call">
+          <ng-template mat-tab-label>
+            <mat-icon>call</mat-icon> Call
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Log activity">
+          <ng-template mat-tab-label>
+            <mat-icon>add</mat-icon> Log activity
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Create task">
+          <ng-template mat-tab-label>
+            <mat-icon>notes</mat-icon> Create task
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Schedule">
+          <ng-template mat-tab-label>
+            <mat-icon>event_note</mat-icon> Schedule
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+    <mat-tab-group>
+      <mat-tab label="Activity">
+        <ng-template matTabContent>
+          Content 1
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Notes">
+        <ng-template matTabContent>
+          Content 2
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Emails">
+        <ng-template matTabContent>
+          Content 3
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Calls">
+        <ng-template matTabContent>
+          Content 3
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Tasks">
+        <ng-template matTabContent>
+          Content 3
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,17 @@
+.customer-details-container {
+  width: 1500px;
+  height: 800px;
+  margin: 10px;
+  border: 1px solid #555;
+}
+.customer-card {
+  max-width: 600px;
+}
+.customer-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.full-width {
+  width: 100%;
+}
+
